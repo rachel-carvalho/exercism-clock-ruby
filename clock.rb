@@ -34,10 +34,14 @@ class Clock
   def minutes=(value)
     @full_minutes = value
     @minutes      = value % 60
-    self.hours    = self.hours
+    update_hours
   end
 
   private
+
+  def update_hours
+    self.hours = self.hours
+  end
 
   def format(value)
     sprintf '%02d', value
