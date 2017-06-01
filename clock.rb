@@ -27,7 +27,7 @@ class Clock
   end
 
   def hours=(value)
-    return if value.nil?
+    return @hours = value if value.nil?
     @hours = (value + @full_minutes / 60) % 24
   end
 
