@@ -19,8 +19,7 @@ class Clock
   end
 
   def +(minutes)
-    self.minutes += minutes
-    self
+    self.tap { self.minutes += minutes }
   end
 
   def ==(other)
